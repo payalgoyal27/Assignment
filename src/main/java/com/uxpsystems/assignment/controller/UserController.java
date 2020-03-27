@@ -3,6 +3,8 @@ package com.uxpsystems.assignment.controller;
 import com.uxpsystems.assignment.dao.entity.User;
 import com.uxpsystems.assignment.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,22 +16,22 @@ public class UserController {
     UserService userService;
 
     @RequestMapping("/users")
-    public List<User> getUsers() {
-        return userService.getAllUsers();
+    public ResponseEntity getUsers() {
+        return new ResponseEntity(userService.getAllUsers(), HttpStatus.OK);
     }
 
     @RequestMapping(value="/user", method=RequestMethod.POST, consumes = "application/json")
-    public Long addUser(@RequestBody User user) {
-        return userService.addUser(user);
+    public ResponseEntity addUser(@RequestBody User user) {
+        return new ResponseEntity(userService.addUser(user),HttpStatus.OK);
     }
 
     @RequestMapping(value="/user", method=RequestMethod.PUT, consumes = "application/json")
-    public Long updateUser(@RequestBody User user) {
-        return userService.updateUser(user);
+    public ResponseEntity updateUser(@RequestBody User user) {
+        return new ResponseEntity(userService.updateUser(user),HttpStatus.OK);
     }
 
     @RequestMapping(value="/user", method=RequestMethod.DELETE, consumes = "application/json")
-    public Long deleteUser(@RequestBody Long id) {
-        return userService.deleteUser(id);
+    public ResponseEntity deleteUser(@RequestBody Long id) {
+        return new ResponseEntity(userService.deleteUser(id),HttpStatus.OK);
     }
 }

@@ -8,6 +8,11 @@ This is sample project that will expose the CRUD endpoints for User Entity using
 - run on cmd : mvn clean install package
 - run on cmd : java -jar target/assignment-0.0.1-SNAPSHOT.jar
 
+### Credentials (need to be updated in postman Authorization, basic Auth)
+- username : user1
+- password : password1
+- username : user2
+- password : password2 
 ### Endpoints 
 - POST : http://localhost:8080/user
 - GET : http://localhost:8080/users
