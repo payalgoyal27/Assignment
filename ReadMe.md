@@ -5,7 +5,7 @@ This is sample project that will expose the CRUD endpoints for User Entity using
 
 - Make sure you have cloned the project into the local system  
 - **(Kindly Note)** Make sure mvn -version is working 
-- run on cmd : mvn clean package
+- run on cmd : mvn clean install package
 - run on cmd : java -jar target/assignment-0.0.1-SNAPSHOT.jar
 
 ### Endpoints 
