@@ -7,7 +7,12 @@ This is sample project that will expose the CRUD endpoints for User Entity using
 - **(Kindly Note)** Make sure mvn -version is working 
 - run on cmd : mvn clean package
 - run on cmd : java -jar target/assignment-0.0.1-SNAPSHOT.jar
-- when trying to access the end-points try following username : "user" Password : "password"
+
+### Endpoints 
+- POST : http://localhost:8080/user
+- GET : http://localhost:8080/users
+- PUT : http://localhost:8080/user
+- DELETE : http://localhost:8080/user
 
 ## For Checking the Database value(here we are using H2)
 
@@ -15,4 +20,3 @@ This is sample project that will expose the CRUD endpoints for User Entity using
 - JDBC url : jdbc:h2:mem:testdb 
 - UserName : sa
 - Password : 
-
