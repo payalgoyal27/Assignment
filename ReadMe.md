@@ -14,6 +14,14 @@ This is sample project that will expose the CRUD endpoints for User Entity using
 - PUT : http://localhost:8080/user
 - DELETE : http://localhost:8080/user
 
+##### Payload
+
+       {
+    	    "username": "User4",
+    	    "password": "password6",
+    	    "status": "Activated"
+    	}
+
 ## For Checking the Database value(here we are using H2)
 
 - Go to http://localhost:8080/h2-console/
